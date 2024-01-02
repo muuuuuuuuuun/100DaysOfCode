@@ -42,3 +42,33 @@ Values in JavaScript can be truthy or falsy.
 I need to check if invalidInputMatch is truthy by using it directly in the if condition (without a comparison operator).
 
 In summary, today I learned how to fix bugs in counting and preserving entries, create a function to calculate calorie counts from user inputs, loop through a NodeList of input elements, get and clean input values, and handle invalid inputs by checking their truthiness.
+
+**Day 3
+#Alerting Users:
+-Browsers have a built-in alert() function for pop-up messages.
+-I can use alert("message") to show a message to the user.
+
+#Handling Valid Input:
+-After checking if input is valid, I don't need an else statement.
+-I use the addition assignment operator to add currVal (cleaned input) to calories.
+-I convert currVal to a number using Number(currVal).
+
+#Number Constructor:
+-Number('10') turns a value into a number.
+-If conversion fails, it returns NaN ("Not a Number").
+
+#Calculate Calories Function:
+-I declare the calculateCalories function with a parameter e (browser event).
+-I attach it to the form's submit event.
+-I use e.preventDefault() to stop page reload.
+-I reset the global error flag to false.
+
+#Getting Number Inputs:
+-I declare breakfastNumberInputs, lunchNumberInputs, etc.
+-I use document.querySelectorAll() to get number inputs in respective sections (#breakfast, #lunch, etc.).
+
+#Calling getCaloriesFromInputs:
+-I declare breakfastCalories.
+-I assign the result of getCaloriesFromInputs(breakfastNumberInputs) to breakfastCalories.
+
+In summary, I'm learning to alert users, handle valid input, use the Number constructor, create a function to calculate calories, prevent form submission from reloading the page, get number inputs from different sections, and calculate calories for breakfast using the provided functions.
