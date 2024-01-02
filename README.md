@@ -1,2 +1,78 @@
 # 100DaysOfCode
 Can I actually do it? probably.
+
+##Day 1
+Today I learned about what the hell im doing right now. Yeah, that's right: Github. I already have created my github account a long  time ago, but I don't know how to use it till this day. So yeah,
+currently exploring this app by doing this challenge thing, 100 days of code. Hope that my future me will be consistent update this github thingy.
+
+Also, I do a bunch of JavaScript things in freeCodeCamp. Seriously, that website is the best. I learned a lot doing their free projects, although sometimes its the questions are quite tough and I had to use ChatGPT
+for it. But yeah, Im trying to be consistent with it.
+
+Just so you know, at this point, I had intermediate understanding of HTML, CSS and Javascript. But if you ask me to do projects, maybe im going to be slow as heck.
+
+Welp, sorry for the language too. I will try to improve by doing this diary. Cant wait for the future me to read this first and being embarrassed/proud of the progress.
+
+So yeah, that's it. BYE!
+
+##Day 2
+-Fixing Entry Counts:
+When adding entries to a Breakfast category, I should ensure the first entry starts with a count of 1, not 0.
+The bug arises from querying input elements before adding a new entry, so I need to update the entryNumber variable to be the length of the query plus 1.
+
+-Preserving Input Content:
+When adding multiple entries, the values may disappear if innerHTML is used directly.
+To avoid this, I should use the insertAdjacentHTML() method of targetInputContainer, which takes two arguments – the position of the inserted element and the HTML content to be inserted.
+
+-Creating a Function for Calorie Counts:
+I need to declare a function named getCaloriesFromInputs with a parameter called list.
+Inside the function, I should declare a calories variable and set it to 0.
+The list parameter is a NodeList obtained from a query selector, containing input elements.
+
+-Looping Through NodeList:
+I should use a for loop with an iterator (i) starting at 0, continuing while i is less than the length of the list, and incrementing by 1 each iteration.
+The NodeList consists of input elements.
+
+-Getting Input Values:
+I need to retrieve the value of each input element at index i in the list and assign it to a variable called currVal.
+I should use the cleanInputString function to clean the user's input by calling it with list[i].value.
+
+-Handling Invalid Inputs:
+I should declare an invalidInputMatch variable and set it to the result of calling isInvalidInput function with currVal as the argument.
+The isInvalidInput function returns String.match, which is an array of matches or null if no matches are found.
+
+-Checking Truthiness of Invalid Input:
+Values in JavaScript can be truthy or falsy.
+I need to check if invalidInputMatch is truthy by using it directly in the if condition (without a comparison operator).
+
+In summary, today I learned how to fix bugs in counting and preserving entries, create a function to calculate calorie counts from user inputs, loop through a NodeList of input elements, get and clean input values, and handle invalid inputs by checking their truthiness.
+
+**Day 3
+#Alerting Users:
+-Browsers have a built-in alert() function for pop-up messages.
+-I can use alert("message") to show a message to the user.
+
+#Handling Valid Input:
+-After checking if input is valid, I don't need an else statement.
+-I use the addition assignment operator to add currVal (cleaned input) to calories.
+-I convert currVal to a number using Number(currVal).
+
+#Number Constructor:
+-Number('10') turns a value into a number.
+-If conversion fails, it returns NaN ("Not a Number").
+
+#Calculate Calories Function:
+-I declare the calculateCalories function with a parameter e (browser event).
+-I attach it to the form's submit event.
+-I use e.preventDefault() to stop page reload.
+-I reset the global error flag to false.
+
+#Getting Number Inputs:
+-I declare breakfastNumberInputs, lunchNumberInputs, etc.
+-I use document.querySelectorAll() to get number inputs in respective sections (#breakfast, #lunch, etc.).
+
+#Calling getCaloriesFromInputs:
+-I declare breakfastCalories.
+-I assign the result of getCaloriesFromInputs(breakfastNumberInputs) to breakfastCalories.
+
+In summary, I'm learning to alert users, handle valid input, use the Number constructor, create a function to calculate calories, prevent form submission from reloading the page, get number inputs from different sections, and calculate calories for breakfast using the provided functions.
+!Also I put my picture for my GitHub profile. Nice!
